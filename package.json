@@ -26,9 +26,9 @@
     ]
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.13.4",
-    "actions-on-google": "^1.0.0"
+    "actions-on-google": "^1.0.5",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1"
   },
   "devDependencies": {
     "semistandard": "^9.1.0"

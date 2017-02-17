@@ -2,16 +2,34 @@
   "versionLabel": "1.0.0",
   "agentInfo": {
     "languageCode": "en-US",
-    "projectId": "hello",
+    "projectId": "actiongimunfact",
     "voiceName": "male_1"
   },
   "actions": [
     {
+      "description": "Launch intent",
       "initialTrigger": {
         "intent": "assistant.intent.action.MAIN"
       },
       "httpExecution": {
-        "url": "YOUR_ENDPOINT_URL"
+        "url": "https://calm-beyond-15374.herokuapp.com/"
+      }
+    },
+    {
+      "description": "guess a number game",
+      "initialTrigger": {
+        "intent": "START_GUESS_NUMBER",
+        "queryPatterns": [
+          {
+            "queryPattern": "find a magic number"
+          },
+          {
+            "queryPattern": "guess a number"
+          }
+        ]
+      },
+      "httpExecution": {
+        "url": "https://actiongimunfact.appspot.com/"
       }
     }
   ]

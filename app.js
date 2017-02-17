@@ -31,7 +31,7 @@ app.post('/', function (request, response) {
 
   function mainIntent (assistant) {
     console.log('mainIntent');
-    let inputPrompt = assistant.buildInputPrompt(true, '<speak>Hi! <break time="1"/> ' +
+    let inputPrompt = assistant.buildInputPrompt(true, '<speak>Hi! This is Gimun. <break time="1"/> ' +
           'I can read out an ordinal like ' +
           '<say-as interpret-as="ordinal">123</say-as>. Say a number.</speak>',
           ['I didn\'t hear a number', 'If you\'re still there, what\'s the number?', 'What is the number?']);
@@ -55,6 +55,10 @@ app.post('/', function (request, response) {
   actionMap.set(assistant.StandardIntents.TEXT, rawInput);
 
   assistant.handleRequest(actionMap);
+});
+
+app.get("/", function(req, res) {
+  res.send("Hello, ");
 });
 
 // Start the server
